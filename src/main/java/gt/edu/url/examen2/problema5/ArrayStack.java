@@ -26,12 +26,9 @@ package gt.edu.url.examen2.problema5;
 
 	    @Override
 	    public void push(E e) {
-	        
 	        if(size==data.length)
 	        {
 	            resize(2*size);
-	          
-	            
 			data[size] = e; 
 			size++;
 	        }
@@ -40,7 +37,6 @@ package gt.edu.url.examen2.problema5;
 	            data[size] = e;
 	            size++;
 	        }
-	       
 	    }
 
 	    @Override
