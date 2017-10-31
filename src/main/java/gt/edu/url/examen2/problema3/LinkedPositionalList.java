@@ -199,12 +199,14 @@ public class LinkedPositionalList<E> implements PositionalList<E>, Iterable<E> {
     Node<E> tempelement2;
 	@Override
 	public void swap(Position<E> p, Position<E> q) {
-		tempelement1 = validate(p);
-		tempelement2 = validate(q);
-        E temp1 = tempelement1.getElement(); 
-        E temp2 = tempelement2.getElement();
-        tempelement1.setElement(temp2);
-        tempelement2.setElement(temp1);
+		//Se asgina cada nodo a un elemento
+        	E espec2 = p.getElement();
+        
+		E espec1= q.getElement();
+		
+		set(p,espec1);
+		
+		set(q,espec2);
 	}
 
 }
