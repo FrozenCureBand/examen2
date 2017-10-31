@@ -199,22 +199,19 @@ public class LinkedPositionalList<E> implements PositionalList<E>, Iterable<E> {
 
 	@Override
 	public Position<E> positionAtIndex(int i) {
-		Node<E> eGet = header.getNext();
-		int j = 0;		
-		while(eGet != null)
-		{  
-			if(j == i-1)
-                {
-				return eGet;
-                }
-                else
-                {
-			j++;
-			eGet = eGet.getNext();
-          }
-			
-	   }
-		return eGet;
+		//Verifica la posicion
+		if(i<=size) {
+			Position<E> spec=null;
+			for(int cont = 0; cont< i; cont++) {
+				remove(first());
+			}
+			spec = first();
+			return spec;
+		}
+		else {
+			System.out.println("IndexOutOfBoundsException");
+			return null;
+		}
 	}
 
 }
