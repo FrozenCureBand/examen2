@@ -15,5 +15,7 @@ public interface PositionalList<E> {
 	E remove(Position<E> p) throws IllegalArgumentException;
         //Metodo a implementar
         void swap(Position<E> p, Position<E> q);
-
+        
 }
+
+
